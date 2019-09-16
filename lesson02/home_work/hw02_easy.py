@@ -12,14 +12,36 @@
 # 4.  арбуз
 
 # Подсказка: воспользоваться методом .format()
-
+fruits = ["яблоко", "банан", "киви", "арбуз"]
+i = 0
+for fruit in fruits:
+    i = i + 1
+    loc_fruit = str(i) + '. ' + '{:>10}'.format(fruit)
+    print(loc_fruit)
 
 # Задача-2:
 # Даны два произвольные списка.
 # Удалите из первого списка элементы, присутствующие во втором списке.
-
-
+list1 = ["Вася", "Петя", "Маша", "Наташа"]
+list2 = ["Гриша", "John", "Mike", "Петя", "Наташа"]
+for anyname in list2:
+    if list1.count(anyname) > 0:
+        list1.remove(anyname)
+for anyname in list1:
+    print(anyname)
 # Задача-3:
 # Дан произвольный список из целых чисел.
 # Получите НОВЫЙ список из элементов исходного, выполнив следующие условия:
 # если элемент кратен двум, то разделить его на 4, если не кратен, то умножить на два.
+numbers = [1, 2, 5, 6, 7, 8, 20, 50]
+newlist = []
+for numb in numbers:
+    if numb % 2 == 0:
+        newdig = numb / 4
+        newlist.append(newdig)
+    else:
+        newdig = numb * 2
+        newlist.append(newdig)
+
+for newnumb in newlist:
+    print(newnumb)
